@@ -1,0 +1,39 @@
+.circular-text {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  color: linear-gradient(red, orange);
+  font-size: 20px;
+  font-weight: 700;
+  font-family: Arial, sans-serif;
+  animation: spin 20s linear infinite;
+  display: inline-block;
+}
+
+.circular-text span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: 0 0;
+  white-space: pre;
+  user-select: none;
+  pointer-events: none;
+    background: linear-gradient(90deg, #ff8a00, #e52e71, purple);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.circular-text:hover {
+  animation: spin 5s linear infinite;
+  transform: scale(1.05);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
